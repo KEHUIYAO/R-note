@@ -1,0 +1,41 @@
+---
+title: "purrr"
+author: "ykh"
+date: "2017年7月8日"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+
+
+```{r}
+x=list(1,3,5)
+y=list(2,4,6)
+map2(x,y,c)
+map2(x,y,c) %>% 
+  flatten_dbl()
+```
+
+```{r}
+mtcars %>% 
+  split(.$cyl) %>% 
+  map(~lm(mpg~wt,data=.x)) %>% 
+  map(summary) %>% 
+  map_dbl("r.squared") ### this function is interesting
+  
+```
+
+```{r}
+iris %>% map_if(is.factor,as.character) %>% 
+  str()
+```
+
+```{r}
+map2(1:3, 2:4, ~ .x * (.y - 1))
+
+```
+
