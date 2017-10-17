@@ -1,0 +1,9 @@
+segments(x0, y0, x1 = x0, y1 = y0,
+         col = par("fg"), lty = par("lty"), lwd = par("lwd"),
+         ...)
+Details
+
+For each i, a line segment is drawn between the point (x0[i], y0[i]) and the point (x1[i], y1[i]). The coordinate vectors will be recycled to the length of the longest.
+
+The graphical parameters col, lty and lwd can be vectors of length greater than one and will be recycled if necessary.
+
