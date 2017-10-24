@@ -1,0 +1,2 @@
+If you want to unname a vector , say you want to extract the values from a vector with names , you need to use unname function, 
+it's the same like unlist(x,use.names=F)
