@@ -1,0 +1,9 @@
+You can use . as described in the help page for formula. The . stands for "all columns not otherwise in the formula".
+
+lm(output ~ ., data = myData).
+
+Alternatively, construct the formula manually with paste. This example is from the as.formula() help page:
+
+xnam <- paste("x", 1:25, sep="")
+(fmla <- as.formula(paste("y ~ ", paste(xnam, collapse= "+"))))
+You can then insert this object into regression function: lm(fmla, data = myData).
