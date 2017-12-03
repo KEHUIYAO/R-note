@@ -1,0 +1,4 @@
+example(PowerTransform)
+transform positive y using bcpower
+transform negtive y using bncpower
+powertransform is used to select power
